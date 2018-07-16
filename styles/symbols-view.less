@@ -5,3 +5,83 @@
   color: @text-color-highlight;
   font-weight: bold;
 }
+
+// multi-level symbols
+
+.select-list .symbol-level-indent {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  padding-left: 1em;
+}
+
+// icons
+
+@symbol-class:    '\e600';
+@symbol-struct:   '\e601';
+@symbol-macro:    '\e602';
+@symbol-typedef:  '\e603';
+@symbol-union:    '\e604';
+@symbol-interface:'\e605';
+@symbol-enum:     '\e606';
+@symbol-variable: '\e607';
+@symbol-function: '\e608';
+@symbol-namespace:'\e609';
+
+.symbol-icon(@name) {
+  font-size: 12px;
+  font-family: 'symbol-icons';
+  content: @@name;
+}
+
+.symbols-view .icon-function::before {
+  .symbol-icon(symbol-function);
+}
+
+.symbols-view .icon-class::before {
+  .symbol-icon(symbol-class);
+}
+
+.symbols-view .icon-namespace::before {
+  .symbol-icon(symbol-namespace);
+}
+
+.symbols-view .icon-struct::before {
+  .symbol-icon(symbol-struct);
+}
+
+.symbols-view .icon-variable::before {
+  .symbol-icon(symbol-variable);
+}
+
+.symbols-view .icon-method::before {
+  .symbol-icon(symbol-function);
+}
+
+.symbols-view .icon-field::before {
+  .symbol-icon(symbol-variable);
+}
+
+.symbols-view .icon-member::before {
+  .symbol-icon(symbol-variable);
+}
+
+.symbols-view .icon-interface::before {
+  .symbol-icon(symbol-interface);
+}
+
+.symbols-view .icon-enum::before {
+  .symbol-icon(symbol-enum);
+}
+
+.symbols-view .icon-typedef::before {
+  .symbol-icon(symbol-typedef);
+}
+
+.symbols-view .icon-macro::before {
+  .symbol-icon(symbol-macro);
+}
+
+.symbols-view .icon-union::before {
+  .symbol-icon(symbol-union);
+}
