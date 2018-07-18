@@ -86,7 +86,7 @@ module.exports =
           key = tag.type + ':' + tag.name
         parents[key] = tag
       
-      console.log('parents', parents)
+      # console.log('parents', parents)
 
       # try to build up the missed parent
       @buildMissedParent(parents)
@@ -118,7 +118,7 @@ module.exports =
 
     flatTree: () ->
       {root, types} = @parse()
-      console.log(root)
+      # console.log(root)
       flat = []
       for tree in root.children
         Array::push.apply flat, @flatten(tree, 0)
@@ -127,7 +127,7 @@ module.exports =
     flatten: (tree, level=0) ->
       {name, position, type, label, icon} = tree
       item = {name, position, type, label, icon, level: level}
-      console.log(item)
+      # console.log(item)
       flat = [item]
       if tree.children
         for child in tree.children
